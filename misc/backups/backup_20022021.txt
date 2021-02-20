@@ -1,0 +1,69 @@
+//===============================================================
+
+/* import React from 'react';
+
+import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import 'bootstrap/dist/css/bootstrap.min.css';
+function DropDown(props) {
+    return (
+        <>
+            {['Primary'].map(
+                (variant) => (
+                <DropdownButton
+                    as={ButtonGroup}
+                    key={variant}
+                    id={`dropdown-variants-${variant}`}
+                    variant={variant.toLowerCase()}
+                    title={variant}
+                    //onSelect={this.handleSelect}
+                >
+                    <Dropdown.Item eventKey="1">Industrial and management Engineering</Dropdown.Item>
+                    <Dropdown.Item eventKey="1"> Computer Science</Dropdown.Item>
+                    <Dropdown.Item eventKey="1"> Biology</Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+                </DropdownButton>
+                ),
+            )}
+            {['Secondary'].map(
+                (variant) => (
+                <DropdownButton
+                    as={ButtonGroup}
+                    key={variant}
+                    id={`dropdown-variants-${variant}`}
+                    variant={variant.toLowerCase()}
+                    title={variant}
+                >
+
+
+
+                    <Dropdown.Divider />
+                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+                </DropdownButton>
+                ),
+            )}
+            {['Success'].map(
+                (variant) => (
+                <DropdownButton
+                    as={ButtonGroup}
+                    key={variant}
+                    id={`dropdown-variants-${variant}`}
+                    variant={variant.toLowerCase()}
+                    title={variant}
+                >
+
+
+                    <Dropdown.Divider />
+                    <Dropdown.Item eventKey="4">Separated link</Dropdown.Item>
+                </DropdownButton>
+                ),
+            )}
+        </>
+    )
+}
+
+export default DropDown;
+ */
