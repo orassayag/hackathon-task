@@ -1,6 +1,6 @@
-# Client
+# Hackathon Task
 
-Built on September 2020. Example of simple React.js application built with create-react-app.
+Built in September 2020. Example of simple React.js application built with create-react-app.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
