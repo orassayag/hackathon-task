@@ -21,7 +21,7 @@ const DropDown = (props) => {
                     {mainArray.list.map((c, i) => (
                         <Dropdown.Item
                             name={mainArray.name}
-                            reffer={c}
+                            refer={c}
                             key={i}>
                             {c}
                         </Dropdown.Item>
@@ -40,7 +40,7 @@ const DropDown = (props) => {
                     {secondArray.list.map((c, i) => (
                         <Dropdown.Item
                             name={mainArray.name}
-                            reffer={c}
+                            refer={c}
                             key={i}>
                             {c}
                         </Dropdown.Item>

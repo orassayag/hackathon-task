@@ -11,7 +11,7 @@ function Welcoming() {
             <Jumbotron>
                 <h1>Study Buddy :)</h1>
                 <p>
-                    Platform to create wonderful new friendships and study buddys
+                    Platform to create wonderful new friendships and study buddies
             </p>
                 <p>
                     <Button variant="primary">Learn more</Button>

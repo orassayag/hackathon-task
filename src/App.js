@@ -20,7 +20,7 @@ import Card from 'react-bootstrap/Card';
 
 
 /* const Majors = ["IEM", "Computer Science", "Biology"]
-  const IEM = ["calculus", "Algebra", "IntroJava", "Economics", "physicis1B"];
+  const IEM = ["calculus", "Algebra", "IntroJava", "Economics", "physics1B"];
   const CompScience = ["calculus", "Algebra", "IntroScience", "Logic", "Combi"];
   const Biology = ["Anatomy", "The cell", "Chemistry", "Calculus"]; */
 
@@ -55,12 +55,12 @@ const App = () => {
 
   const handleSelectClick = (e) => {
     const name = getAttributeName(e, 'name');
-    const reffer = getAttributeName(e, 'reffer');
+    const refer = getAttributeName(e, 'refer');
     if (name) {
-      const secondArray = arrays.find(c => c.name === reffer);
+      const secondArray = arrays.find(c => c.name === refer);
       secondArray.title = secondArray.name;
       setSecondArray(secondArray);
-      mainArray.title = reffer;
+      mainArray.title = refer;
       setMainArray(mainArray);
     }
   };
