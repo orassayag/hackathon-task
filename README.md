@@ -1,84 +1,215 @@
-# Hackathon Task
+# StudyBuddy
 
-Built in September 2020. Example of simple React.js application built with create-react-app.
+A React-based web platform to help students find study partners and create study groups for their courses. Connect with fellow students, post study requests, and build meaningful academic friendships.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built in September 2020 as a hackathon project. This application was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses React Bootstrap for a modern, responsive UI.
+
+## Features
+
+- 🔐 User authentication (Login/Signup)
+- 🎓 Study group discovery and creation
+- 💬 Forum-style study request cards
+- 🔍 Dropdown navigation for filtering study groups
+- 📱 Responsive Bootstrap UI
+- 🌐 Hebrew language support for Israeli students
+- 🧭 React Router for seamless navigation
+
+## Application Architecture
+
+```mermaid
+graph TD
+    A[App.js - Main Router] --> B[Home - Navigation Bar]
+    A --> C[Welcoming - Landing Page]
+    A --> D[Login Form]
+    A --> E[Signup Form]
+    A --> F[Study Groups Page]
+    
+    B --> G[Navigation Links]
+    B --> H[Auth Buttons]
+    
+    F --> I[DropDown - Filters]
+    F --> J[ForumCard - Study Requests]
+    F --> J
+    F --> J
+    F --> J
+    
+    style A fill:#4a90e2
+    style B fill:#50c878
+    style F fill:#ff6b6b
+```
+
+## Component Flow
+
+```mermaid
+flowchart LR
+    A[User Visits Site] --> B{Route Selection}
+    
+    B -->|/| C[Landing Page]
+    B -->|/login| D[Login Form]
+    B -->|/signup| E[Signup Form]
+    B -->|/forming| F[Study Groups]
+    
+    C --> G[Welcoming Jumbotron]
+    C --> H[Hero Image]
+    
+    D --> I[Email/Password Input]
+    E --> I
+    
+    F --> J[DropDown Filters]
+    F --> K[Multiple ForumCards]
+    
+    K --> L[Study Request Details]
+    L --> M[Contact Button]
+    
+    style A fill:#ffd700
+    style B fill:#4a90e2
+    style F fill:#ff6b6b
+    style K fill:#50c878
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v10 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/orassayag/hackathon-task.git
+cd hackathon-task
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000).
+- Page reloads on edits
+- Lint errors appear in console
 
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Builds the app for production to the `build/` folder.
+- Optimizes React for best performance
+- Minifies and hashes filenames
+- Ready for deployment
 
 ### `npm run eject`
+**Warning: This is a one-way operation!**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Exposes webpack configuration for advanced customization.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+hackathon-task/
+├── public/              # Static files and HTML template
+├── src/
+│   ├── App.js           # Main component with routing
+│   ├── index.js         # Entry point
+│   ├── Home.js          # Navigation bar
+│   ├── Welcoming.js     # Landing page
+│   ├── Login.js         # Login form
+│   ├── Signup.js        # Registration form
+│   ├── ForumCard.js     # Study group card
+│   ├── DropDown.js      # Filter dropdown
+│   └── Person.js        # Example component
+└── package.json
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Technology Stack
+
+- **React 16.13.1** - UI library
+- **React Router 5.2.0** - Client-side routing
+- **React Bootstrap 1.3.0** - UI components
+- **Bootstrap 4.5.2** - Styling framework
+- **React Scripts 3.4.3** - Build tooling
+
+## Routes
+
+| Route | Description |
+|-------|-------------|
+| `/` | Landing page with welcome message |
+| `/login` | User login form |
+| `/signup` | User registration form |
+| `/forming` | Find study buddies and view study requests |
+
+## Components
+
+### Navigation (`Home.js`)
+Bootstrap navbar with links to all sections and authentication buttons.
+
+### Landing (`Welcoming.js`)
+Hero section with StudyBuddy branding and call-to-action.
+
+### Authentication
+- `Login.js` - Email/password login form
+- `Signup.js` - User registration form
+
+### Study Features
+- `ForumCard.js` - Displays study requests (supports Hebrew)
+- `DropDown.js` - Filterable dropdown navigation
+- `Person.js` - Example component demonstrating props
+
+## Browser Support
+
+Production build targets:
+- >0.2% market share
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Not dead browsers
+- Excludes Opera Mini
+
+## Deployment
+
+Build the production version:
+```bash
+npm run build
+```
+
+Deploy the `build/` folder to:
+- GitHub Pages
+- Netlify
+- Vercel
+- Heroku
+- Any static hosting service
+
+See the [Create React App deployment documentation](https://facebook.github.io/create-react-app/docs/deployment) for detailed instructions.
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [Create React App Documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+- [React Documentation](https://reactjs.org/)
+- [React Bootstrap Documentation](https://react-bootstrap.github.io/)
+- [React Router Documentation](https://reactrouter.com/)
 
 ## Author
 
 * **Or Assayag** - *Initial work* - [orassayag](https://github.com/orassayag)
 * Or Assayag <orassayag@gmail.com>
 * GitHub: https://github.com/orassayag
-* StackOverFlow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
+* StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
 * LinkedIn: https://linkedin.com/in/orassayag
 
 ## License
 
-This application has an UNLICENSED license.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

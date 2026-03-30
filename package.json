@@ -1,11 +1,28 @@
 {
   "name": "hackathon-task",
   "version": "0.1.0",
+  "description": "A React-based web platform to help students find study partners and create study groups for their courses",
+  "keywords": [
+    "react",
+    "study-buddy",
+    "education",
+    "student",
+    "study-groups",
+    "hackathon",
+    "react-bootstrap",
+    "react-router"
+  ],
+  "license": "MIT",
+  "author": "Or Assayag <orassayag@gmail.com> (https://github.com/orassayag)",
   "private": false,
   "repository": {
     "type": "git",
     "url": "git://github.com/orassayag/hackathon-task.git"
   },
+  "bugs": {
+    "url": "https://github.com/orassayag/hackathon-task/issues"
+  },
+  "homepage": "https://github.com/orassayag/hackathon-task#readme",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
