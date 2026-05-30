@@ -9,6 +9,7 @@ Everyone is welcome to contribute to this project. Contributing doesn't just mea
 ### Reporting Issues
 
 If you find a bug or have a feature request:
+
 1. Check if the issue already exists in the [GitHub Issues](https://github.com/orassayag/hackathon-task/issues)
 2. If not, create a new issue with:
    - Clear title and description
@@ -32,12 +33,14 @@ If you find a bug or have a feature request:
 ### Code Style Guidelines
 
 This project uses:
+
 - **React** (functional components with hooks)
 - **React Bootstrap** for UI components
 - **React Router** for navigation
 - **ESLint** for code quality (extends react-app)
 
 Before submitting:
+
 ```bash
 # Install dependencies
 npm install
@@ -56,7 +59,7 @@ npm start
 
 1. **Functional Components**: Use functional components with React hooks
 2. **Props Destructuring**: Destructure props at the component level
-3. **Naming Conventions**: 
+3. **Naming Conventions**:
    - Components: PascalCase (e.g., `ForumCard`, `DropDown`)
    - Functions: camelCase (e.g., `handleSelectClick`)
    - Files: Match component names
@@ -67,6 +70,7 @@ npm start
 ### Adding New Features
 
 When adding new features:
+
 1. Create components in the `src/` directory
 2. Update routing in `src/App.js` if needed
 3. Import Bootstrap components as needed
@@ -86,9 +90,9 @@ When adding new features:
 
 Please feel free to contact me with any question, comment, pull-request, issue, or any other thing you have in mind.
 
-* Or Assayag <orassayag@gmail.com>
-* GitHub: https://github.com/orassayag
-* StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
-* LinkedIn: https://linkedin.com/in/orassayag
+- Or Assayag <orassayag@gmail.com>
+- GitHub: https://github.com/orassayag
+- StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
+- LinkedIn: https://linkedin.com/in/orassayag
 
 Thank you for contributing! 🙏

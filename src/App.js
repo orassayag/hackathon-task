@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Welcoming from './Welcoming';
 import ForumCard from './ForumCard';
@@ -18,46 +14,48 @@ import Nav from 'react-bootstrap/Nav';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-
 /* const Majors = ["IEM", "Computer Science", "Biology"]
   const IEM = ["calculus", "Algebra", "IntroJava", "Economics", "physics1B"];
   const CompScience = ["calculus", "Algebra", "IntroScience", "Logic", "Combi"];
   const Biology = ["Anatomy", "The cell", "Chemistry", "Calculus"]; */
 
 const getAttributeName = (e, attributeName) => {
-  return e.target.getAttribute(attributeName) || e.currentTarget.getAttribute(attributeName);
-}
+  return (
+    e.target.getAttribute(attributeName) ||
+    e.currentTarget.getAttribute(attributeName)
+  );
+};
 
 class DegreeList {
   constructor(number) {
-    this.name = "IEM" + number;
-    this.ref = "IEM" + (number + 1);
+    this.name = 'IEM' + number;
+    this.ref = 'IEM' + (number + 1);
     this.title = null;
-    this.list = ["IEM1", "IEM2", "IEM3", "IEM4"]
+    this.list = ['IEM1', 'IEM2', 'IEM3', 'IEM4'];
   }
 }
 
 const App = () => {
-  const [mainArray, setMainArray] = useState(null)
+  const [mainArray, setMainArray] = useState(null);
   const [secondArray, setSecondArray] = useState();
   const [arrays, setArrays] = useState([
     new DegreeList(1),
     new DegreeList(2),
     new DegreeList(3),
-    new DegreeList(4)
+    new DegreeList(4),
   ]);
 
   useEffect(() => {
-    const mainArray = arrays.find(c => c.name === 'IEM1');
+    const mainArray = arrays.find((c) => c.name === 'IEM1');
     mainArray.title = mainArray.name;
     setMainArray(arrays[0]);
-  }, [])
+  }, []);
 
   const handleSelectClick = (e) => {
     const name = getAttributeName(e, 'name');
     const refer = getAttributeName(e, 'refer');
     if (name) {
-      const secondArray = arrays.find(c => c.name === refer);
+      const secondArray = arrays.find((c) => c.name === refer);
       secondArray.title = secondArray.name;
       setSecondArray(secondArray);
       mainArray.title = refer;
@@ -67,17 +65,18 @@ const App = () => {
 
   return (
     <Router>
-      <div className="app">
+      <div className='app'>
         <Switch>
-          <Route path="/login">
+          <Route path='/login'>
             <Home />
             <Login />
           </Route>
-          <Route path="/Signup">
+          <Route path='/Signup'>
             <Home />
             <Signup />
-          </Route>n
-              <Route path="/Forming">
+          </Route>
+          n
+          <Route path='/Forming'>
             <Home />
             <DropDown
               mainArray={mainArray}
@@ -89,15 +88,15 @@ const App = () => {
             <ForumCard />
             <ForumCard />
           </Route>
-          <Route path="/">
+          <Route path='/'>
             <Home />
             <Welcoming />
-            <Person name="IDO" hobbies="Dancing" />
+            <Person name='IDO' hobbies='Dancing' />
           </Route>
         </Switch>
       </div>
     </Router>
-  )
-}
+  );
+};
 
 export default App;

@@ -1,8 +1,10 @@
 {
-    "cSpell.words": [
-        "Assayag",
-        "Combi",
-        "hackathon",
-        "orassayag"
-    ]
+  "cSpell.words": ["Assayag", "buildpack", "Combi", "hackathon", "orassayag"],
+  "cSpell.ignorePaths": [
+    "coverage",
+    "node_modules",
+    "dist",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ]
 }
